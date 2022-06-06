@@ -1,0 +1,198 @@
+:root {
+    --ScissorsGradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+    --PaperGradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
+    --RockGradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+    --LizardGradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
+    --Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+    
+    --DarkText: hsl(229, 25%, 31%);
+    --ScoreText: hsl(229, 64%, 46%);
+    --HeaderOutline: hsl(217, 16%, 45%);
+    
+    --RadialGradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
+    
+    --font-family: 'Barlow Semi Condensed', sans-serif;
+    }
+    
+    body {
+        margin: 0;
+        background-image: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 700px;
+        animation: fade-in ease 2s;
+    }
+
+    .info {
+        max-width: 600px;
+        margin: 50px auto 0 auto ;
+        min-width: 300px;
+        border: 2px solid var(--HeaderOutline);
+        display: flex;
+        padding: 20px;
+        border-radius: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .score-board {
+        background-color: white;
+        max-width: 400px;
+        min-width: 80px;
+        height: 120px;
+        text-align: center;
+        padding: 0px 25px;
+        border-radius: 10px;
+        font-family: var(--font-family);
+    }
+    
+    p:nth-child(1) {
+        color: var(--ScoreText);
+        letter-spacing: 2px;
+    }
+    p:nth-child(2) {
+        font-size: 60px;
+        font-weight: 700;
+        margin: -20px;
+        color: var(--DarkText);
+    }
+    
+    .play {
+        background-image: url('./images/bg-pentagon.svg');
+        background-repeat: no-repeat;
+        width: 330px;
+        margin: auto;
+        margin-top: 80px;
+        height: 310px;
+    }
+    
+    .scissors {
+        background-image: linear-gradient(hsl(39, 89%, 49%),hsl(40, 84%, 53%));
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        position: relative;
+        top: -40px;
+        cursor: pointer;
+    }
+    
+    .scissors2 , .paper2 , .spock2 , .rock2 , .lizard2{
+        background-color: white;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin: auto;
+        position: relative;
+        top: 10px;
+    }
+    
+    .scissors img, .paper2 img, .lizard2 img, .rock2 img {
+        position: relative;
+        top: 20px;
+        left: 20px;
+        width: 35px;
+    }
+    
+    .paper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .spock1 {
+        background-image: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: relative;
+        bottom: 20px;
+        right: 30px;
+        cursor: pointer;
+    } 
+    
+    .spock2 img {
+        position: relative;
+        top: 15px;
+        left: 25px;
+        width: 35px;
+    }
+    
+    .paper1 {
+        background-image: linear-gradient(hsl(230, 89%, 62%) , hsl(230, 89%, 65%));
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: relative;
+        left: 30px;
+        bottom: 20px;
+        cursor: pointer;
+    }
+    
+    .rock {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+    
+    .lizard1 {
+        background-image: linear-gradient(hsl(261, 73%, 60%) , hsl(261, 72%, 63%));
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    .rock1 {
+        background-image: linear-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .rules {
+        position: absolute;
+        background-color: white;
+        top: 150px;
+        left: 35%;
+        right: 35%;
+        padding: 20px;
+        border-radius: 10px;
+        min-width: 300px;
+        z-index: 10;
+        display: none;
+        animation: fade-in ease 2s;
+    }
+    
+    .rules-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: var(--DarkText);
+        font-family: var(--font-family);
+        font-weight: 700;
+        transition: display 1s;
+    }
+    
+    .rules-nav div {
+        font-size: 60px;
+        color: var(--HeaderOutline);
+        font-weight: 100;
+    }
+    
+    .rules img {
+        width: 100%;
+    }
+    
+    .black-screen {
+        position: absolute;
+        width: 100%;
+        height: 800px;
+        background-color: black;
+        opacity: 0.5;
+        top: 0;
+        display: none;
+        transition: 0.5s;
+    }
