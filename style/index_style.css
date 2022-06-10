@@ -63,33 +63,35 @@ p:nth-child(2) {
     background-repeat: no-repeat;
     width: 330px;
     margin: auto;
-    margin-top: 80px;
+    margin-top: 170px;
     height: 310px;
 }
     
 .scissors {
     background-image: linear-gradient(hsl(39, 89%, 49%),hsl(40, 84%, 53%));
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin: auto;
     position: relative;
     cursor: pointer;
+    left: 130px;
+    bottom: 100px;
 }
     
 .scissors2 , .paper2 , .spock2 , .rock2 , .lizard2{
     background-color: white;
-    width: 125px;
-    height: 125px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     margin: auto;
     position: relative;
-    top: 12.5px;
+    top: 25px;
 }
     
 .scissors img, .paper2 img, .lizard2 img, .rock2 img {
     position: relative;
-    width: 50px;
+    width: 75px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -101,32 +103,14 @@ p:nth-child(2) {
     justify-content: space-between;
 }
     
-.spock1 {
-    background-image: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    position: relative;
-    bottom: 20px;
-    right: 30px;
-    cursor: pointer;
-} 
-    
-.spock2 img {
-    position: relative;
-    top: 15px;
-    left: 25px;
-    width: 35px;
-}
-    
 .paper1 {
     background-image: linear-gradient(hsl(230, 89%, 62%) , hsl(230, 89%, 65%));
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     position: relative;
-    left: 30px;
-    bottom: 20px;
+    right: 90px;
+    bottom: 300px;
     cursor: pointer;
 }
     
@@ -137,18 +121,13 @@ p:nth-child(2) {
     margin-top: 50px;
 }
     
-.lizard1 {
-    background-image: linear-gradient(hsl(261, 73%, 60%) , hsl(261, 72%, 63%));
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-    
 .rock1 {
     background-image: linear-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
-    width: 150px;
-    height: 150px;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    bottom: 290px;
+    left: 50px;
     border-radius: 50%;
     cursor: pointer;
 }
