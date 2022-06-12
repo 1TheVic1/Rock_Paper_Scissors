@@ -1,14 +1,19 @@
 :root {
     --ScissorsGradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+    --ScissorsShadowGradient:  hsl(28, 73.9% , 45.1%);
     --PaperGradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
+    --PaperShadowGradient:  hsl(229, 64.4% , 46.3%);
     --RockGradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+    --RockShadowGradient:  hsl(348, 78.4% , 36.3%);
     --LizardGradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
     --Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);    
     --DarkText: hsl(229, 25%, 31%);
     --ScoreText: hsl(229, 64%, 46%);
     --HeaderOutline: hsl(217, 16%, 45%);    
     --RadialGradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);    
-    --font-family: 'Barlow Semi Condensed', sans-serif;
+    --font-family: sans-serif;
+    --BackColor: hsl(0 , 0% , 86.7%);
+    --BackShadowColor : hsl(231 , 16.2% , 77.1%) ;
 }
 
 html, body{
@@ -70,6 +75,7 @@ p:nth-child(2) {
 .scissors {
     background-image: linear-gradient(hsl(39, 89%, 49%),hsl(40, 84%, 53%));
     border-radius: 50%;
+    box-shadow: inset 0px -10px 0px var(--ScissorsShadowGradient);
     width: 200px;
     height: 200px;
     margin: auto;
@@ -80,13 +86,14 @@ p:nth-child(2) {
 }
     
 .scissors2 , .paper2 , .spock2 , .rock2 , .lizard2{
-    background-color: white;
+    background-color: var(--BackColor);
+    border-radius: 50%;
+    box-shadow: inset 0px 10px 0px var(--BackShadowColor);
     width: 150px;
     height: 150px;
-    border-radius: 50%;
     margin: auto;
     position: relative;
-    top: 25px;
+    top: 20px;
 }
     
 .scissors img, .paper2 img, .lizard2 img, .rock2 img {
@@ -105,6 +112,7 @@ p:nth-child(2) {
     
 .paper1 {
     background-image: linear-gradient(hsl(230, 89%, 62%) , hsl(230, 89%, 65%));
+    box-shadow: inset 0px -10px 0px var(--PaperShadowGradient);
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -123,6 +131,7 @@ p:nth-child(2) {
     
 .rock1 {
     background-image: linear-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
+    box-shadow: inset 0px -10px 0px var(--RockShadowGradient);
     position: relative;
     width: 200px;
     height: 200px;
@@ -181,15 +190,16 @@ p:nth-child(2) {
     position:fixed;
     right: 20px;
     bottom: 40px;
-    width: 150px;
-    height: 50px;
-    border: 3px solid white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 2px solid white;
     color: white;
     font-family: var(--font-family);
     border-radius: 10px;
-    font-size: 40px;
+    font-size: 12px;
     text-align: center;
-    font-weight: 700;
     animation: fade-in ease 3s;
     transition: 0.5s;
     cursor: pointer;
@@ -206,15 +216,14 @@ p:nth-child(2) {
     position:fixed;
     left: 20px;
     bottom: 40px;
-    width: 150px;
-    height: 50px;
-    border: 3px solid white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 2px solid white;
     color: white;
     font-family: var(--font-family);
     border-radius: 10px;
-    font-size: 40px;
+    font-size: 12px;
     text-align: center;
-    font-weight: 700;
     animation: fade-in ease 3s;
     transition: 0.5s;
     cursor: pointer;
@@ -229,16 +238,18 @@ p:nth-child(2) {
 
 .play-bonus a:link, a:active, a:visited{
     text-decoration: none;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 40px;
+    padding-right: 40px;
     color: white;
     font-family: var(--font-family);
     border-radius: 10px;
-    font-size: 40px;
+    font-size: 12px;
     text-align: center;
-    font-weight: 700;
     animation: fade-in ease 3s;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .play-bonus a:hover{
